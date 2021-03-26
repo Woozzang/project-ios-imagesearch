@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		DDB83915260D875200D448BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB83914260D875200D448BC /* AppDelegate.swift */; };
 		DDB83917260D875200D448BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB83916260D875200D448BC /* SceneDelegate.swift */; };
-		DDB83919260D875200D448BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB83918260D875200D448BC /* ViewController.swift */; };
 		DDB8391C260D875200D448BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB8391A260D875200D448BC /* Main.storyboard */; };
 		DDB8391E260D875400D448BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB8391D260D875400D448BC /* Assets.xcassets */; };
 		DDB83921260D875400D448BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB8391F260D875400D448BC /* LaunchScreen.storyboard */; };
+		DDB8392A260D87C000D448BC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB83929260D87C000D448BC /* SearchViewController.swift */; };
+		DDB8392E260D8A7F00D448BC /* ThumbnailImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8392D260D8A7F00D448BC /* ThumbnailImageViewCell.swift */; };
+		DDB83944260E0D2900D448BC /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB83943260E0D2900D448BC /* SearchResult.swift */; };
+		DDB83948260E0D3800D448BC /* SearchResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB83947260E0D3800D448BC /* SearchResultManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DDB83911260D875200D448BC /* ImageSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB83914260D875200D448BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB83916260D875200D448BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDB83918260D875200D448BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDB8391B260D875200D448BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDB8391D260D875400D448BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB83920260D875400D448BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB83922260D875400D448BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDB83929260D87C000D448BC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DDB8392D260D8A7F00D448BC /* ThumbnailImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageViewCell.swift; sourceTree = "<group>"; };
+		DDB83943260E0D2900D448BC /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		DDB83947260E0D3800D448BC /* SearchResultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		DDB83913260D875200D448BC /* ImageSearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				DDB83942260E0D0A00D448BC /* SearchResult */,
 				DDB83914260D875200D448BC /* AppDelegate.swift */,
 				DDB83916260D875200D448BC /* SceneDelegate.swift */,
-				DDB83918260D875200D448BC /* ViewController.swift */,
+				DDB83929260D87C000D448BC /* SearchViewController.swift */,
 				DDB8391A260D875200D448BC /* Main.storyboard */,
+				DDB8392D260D8A7F00D448BC /* ThumbnailImageViewCell.swift */,
 				DDB8391D260D875400D448BC /* Assets.xcassets */,
 				DDB8391F260D875400D448BC /* LaunchScreen.storyboard */,
 				DDB83922260D875400D448BC /* Info.plist */,
 			);
 			path = ImageSearchApp;
+			sourceTree = "<group>";
+		};
+		DDB83942260E0D0A00D448BC /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				DDB83943260E0D2900D448BC /* SearchResult.swift */,
+				DDB83947260E0D3800D448BC /* SearchResultManager.swift */,
+			);
+			path = SearchResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB83919260D875200D448BC /* ViewController.swift in Sources */,
 				DDB83915260D875200D448BC /* AppDelegate.swift in Sources */,
+				DDB8392E260D8A7F00D448BC /* ThumbnailImageViewCell.swift in Sources */,
+				DDB83944260E0D2900D448BC /* SearchResult.swift in Sources */,
+				DDB8392A260D87C000D448BC /* SearchViewController.swift in Sources */,
+				DDB83948260E0D3800D448BC /* SearchResultManager.swift in Sources */,
 				DDB83917260D875200D448BC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
