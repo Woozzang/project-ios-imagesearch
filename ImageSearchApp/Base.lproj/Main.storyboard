@@ -30,7 +30,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
-                                                <action selector="searchWithSender:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="GVI-nJ-rAf"/>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="hWe-hC-JtJ"/>
                                             </connections>
                                         </textField>
                                     </barButtonItem>
@@ -100,8 +100,12 @@
                             <constraint firstItem="GfO-OM-x8f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xgw-ET-kDc"/>
                             <constraint firstItem="GfO-OM-x8f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y79-69-NUg"/>
                         </constraints>
+                        <connections>
+                            <outlet property="collectionView" destination="5l1-nR-3wK" id="1yv-cQ-vzO"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="5l1-nR-3wK" id="CcX-gT-4PS"/>
                         <segue destination="rY2-9t-RCR" kind="presentation" identifier="DetailPhotoViewSegue" id="p6U-PI-LTM"/>
                     </connections>
                 </viewController>

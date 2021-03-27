@@ -8,23 +8,22 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+  
+  @IBOutlet weak var collectionView: UICollectionView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
       // Do any additional setup after loading the view.
-
-  }
-  
-  @IBAction func search(sender: UITextField) {
-   
   }
 }
 
 extension SearchViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    
+    print( SearchResultManager.shared.searchResultList.count )
+    return SearchResultManager.shared.searchResultList.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -34,7 +33,11 @@ extension SearchViewController: UICollectionViewDataSource {
     }
     
     //TODO: cell Image 할당
-    cell.backgroundColor = .systemBlue
+    let urlString = SearchResultManager.shared.searchResultList[indexPath.item].thumbnailURL
+    
+    guard let url = URL(string: urlString) else { return UICollectionViewCell()}
+    
+    cell.loadImage(from: url)
     
     return cell
   }
@@ -67,6 +70,18 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
   }
 }
 
-
+extension SearchViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    
+    guard let searchKey = textField.text else { return false }
+    
+    // 컬렉션뷰의 reloadData() 를 호출해야 하는 시점
+    // == SearchResultManger에서 SearchResultList 가 모두 채워진 시점
+    // 어떻게 해결하지? -> Notification 으로 한번 해보자
+    SearchResultManager.shared.request(for: searchKey)
+    
+    return true
+  }
+}
 
 

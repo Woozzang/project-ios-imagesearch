@@ -30,6 +30,7 @@
 		DDB8392D260D8A7F00D448BC /* ThumbnailImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageViewCell.swift; sourceTree = "<group>"; };
 		DDB83943260E0D2900D448BC /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DDB83947260E0D3800D448BC /* SearchResultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultManager.swift; sourceTree = "<group>"; };
+		DDB8394A260E11E500D448BC /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 				DDB8391D260D875400D448BC /* Assets.xcassets */,
 				DDB8391F260D875400D448BC /* LaunchScreen.storyboard */,
 				DDB83922260D875400D448BC /* Info.plist */,
+				DDB8394A260E11E500D448BC /* MyPlayground.playground */,
 			);
 			path = ImageSearchApp;
 			sourceTree = "<group>";
