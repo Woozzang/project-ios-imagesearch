@@ -12,6 +12,7 @@ class SearchResultManager {
     
   static let shared = SearchResultManager()
   private(set) var searchResultList = [SearchResult]()
+  var searchVC: SearchViewController?
 
   let dateFormatter = { () -> DateFormatter in
     // "datetime": "2017-06-21T15:59:30.000+09:00"
@@ -87,6 +88,9 @@ extension SearchResultManager {
         print(error)
       }
       
+      DispatchQueue.main.async {
+        self.searchVC?.collectionView.reloadData()
+      }
     }
     
     task.resume()

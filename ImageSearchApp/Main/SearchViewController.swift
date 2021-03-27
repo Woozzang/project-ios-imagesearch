@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    SearchResultManager.shared.searchVC = self
       // Do any additional setup after loading the view.
   }
 }
@@ -22,7 +22,6 @@ extension SearchViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-    print( SearchResultManager.shared.searchResultList.count )
     return SearchResultManager.shared.searchResultList.count
   }
   
@@ -32,7 +31,6 @@ extension SearchViewController: UICollectionViewDataSource {
       return UICollectionViewCell()
     }
     
-    //TODO: cell Image 할당
     let urlString = SearchResultManager.shared.searchResultList[indexPath.item].thumbnailURL
     
     guard let url = URL(string: urlString) else { return UICollectionViewCell()}

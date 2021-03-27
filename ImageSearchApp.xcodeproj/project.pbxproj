@@ -63,11 +63,9 @@
 		DDB83913260D875200D448BC /* ImageSearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				DDB8394E260EF7F000D448BC /* Support */,
+				DDB8394D260EF7E300D448BC /* Main */,
 				DDB83942260E0D0A00D448BC /* SearchResult */,
-				DDB83914260D875200D448BC /* AppDelegate.swift */,
-				DDB83916260D875200D448BC /* SceneDelegate.swift */,
-				DDB83929260D87C000D448BC /* SearchViewController.swift */,
-				DDB8391A260D875200D448BC /* Main.storyboard */,
 				DDB8392D260D8A7F00D448BC /* ThumbnailImageViewCell.swift */,
 				DDB8391D260D875400D448BC /* Assets.xcassets */,
 				DDB8391F260D875400D448BC /* LaunchScreen.storyboard */,
@@ -84,6 +82,24 @@
 				DDB83947260E0D3800D448BC /* SearchResultManager.swift */,
 			);
 			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		DDB8394D260EF7E300D448BC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DDB83929260D87C000D448BC /* SearchViewController.swift */,
+				DDB8391A260D875200D448BC /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DDB8394E260EF7F000D448BC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				DDB83916260D875200D448BC /* SceneDelegate.swift */,
+				DDB83914260D875200D448BC /* AppDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

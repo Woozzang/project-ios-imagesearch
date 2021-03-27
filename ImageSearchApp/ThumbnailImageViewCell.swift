@@ -30,7 +30,9 @@ class ThumbnailImageViewCell: UICollectionViewCell {
       
       guard let image = UIImage(data: data) else { print("\(#function) - Failed to make thumbnail Image."); return }
       
-      self?.thumbnailImage.image = image
+      DispatchQueue.main.async {
+        self?.thumbnailImage.image = image
+      }
     }
     
     task.resume()

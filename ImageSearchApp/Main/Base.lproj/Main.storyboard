@@ -100,9 +100,6 @@
                             <constraint firstItem="GfO-OM-x8f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xgw-ET-kDc"/>
                             <constraint firstItem="GfO-OM-x8f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y79-69-NUg"/>
                         </constraints>
-                        <connections>
-                            <outlet property="collectionView" destination="5l1-nR-3wK" id="1yv-cQ-vzO"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="5l1-nR-3wK" id="CcX-gT-4PS"/>
