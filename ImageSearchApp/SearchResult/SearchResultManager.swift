@@ -50,6 +50,8 @@ extension SearchResultManager {
   
   func request(for query: String, method: HTTPMethod = .get) {
     
+    SearchResultManager.shared.searchResultList.removeAll()
+    
     guard let url = createComponents(searchKey: query).url else { fatalError("\(#function) - Invalid URL.") }
     
     var request = URLRequest(url: url)

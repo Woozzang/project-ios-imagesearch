@@ -10,7 +10,7 @@ import UIKit
 class ThumbnailImageViewCell: UICollectionViewCell {
   
   @IBOutlet var thumbnailImage: UIImageView!
-  private(set) var URL: String?
+//  private(set) var searchResult: SearchResult?
   
   func loadImage(from url: URL) {
     

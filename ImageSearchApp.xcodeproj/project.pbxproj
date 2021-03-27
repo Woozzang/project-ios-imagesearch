@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4DDBFA260EFB3D000E3B62 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DDBF9260EFB3D000E3B62 /* DetailPhotoViewController.swift */; };
 		DDB83915260D875200D448BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB83914260D875200D448BC /* AppDelegate.swift */; };
 		DDB83917260D875200D448BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB83916260D875200D448BC /* SceneDelegate.swift */; };
 		DDB8391C260D875200D448BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB8391A260D875200D448BC /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD4DDBF9260EFB3D000E3B62 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
 		DDB83911260D875200D448BC /* ImageSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB83914260D875200D448BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB83916260D875200D448BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +32,6 @@
 		DDB8392D260D8A7F00D448BC /* ThumbnailImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageViewCell.swift; sourceTree = "<group>"; };
 		DDB83943260E0D2900D448BC /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DDB83947260E0D3800D448BC /* SearchResultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultManager.swift; sourceTree = "<group>"; };
-		DDB8394A260E11E500D448BC /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +71,7 @@
 				DDB8391D260D875400D448BC /* Assets.xcassets */,
 				DDB8391F260D875400D448BC /* LaunchScreen.storyboard */,
 				DDB83922260D875400D448BC /* Info.plist */,
-				DDB8394A260E11E500D448BC /* MyPlayground.playground */,
+				DD4DDBF9260EFB3D000E3B62 /* DetailPhotoViewController.swift */,
 			);
 			path = ImageSearchApp;
 			sourceTree = "<group>";
@@ -175,6 +176,7 @@
 				DDB83915260D875200D448BC /* AppDelegate.swift in Sources */,
 				DDB8392E260D8A7F00D448BC /* ThumbnailImageViewCell.swift in Sources */,
 				DDB83944260E0D2900D448BC /* SearchResult.swift in Sources */,
+				DD4DDBFA260EFB3D000E3B62 /* DetailPhotoViewController.swift in Sources */,
 				DDB8392A260D87C000D448BC /* SearchViewController.swift in Sources */,
 				DDB83948260E0D3800D448BC /* SearchResultManager.swift in Sources */,
 				DDB83917260D875200D448BC /* SceneDelegate.swift in Sources */,

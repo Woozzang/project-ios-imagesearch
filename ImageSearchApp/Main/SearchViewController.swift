@@ -16,6 +16,13 @@ class SearchViewController: UIViewController {
     SearchResultManager.shared.searchVC = self
       // Do any additional setup after loading the view.
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "DetailPhotoViewSegue" {
+      guard let vc = segue.destination as? DetailPhotoViewController else { print("\(#function) - Casting Failure to DetailPhotoViewController") ; return }
+      vc.searchResult = sender as? SearchResult
+    }
+  }
 }
 
 extension SearchViewController: UICollectionViewDataSource {
@@ -48,6 +55,7 @@ extension SearchViewController: UICollectionViewDelegate {
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
+    performSegue(withIdentifier: "DetailPhotoViewSegue", sender: SearchResultManager.shared.searchResultList[indexPath.item])
   }
 }
 

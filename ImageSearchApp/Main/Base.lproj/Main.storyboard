@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="59" y="93"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Photo View Controller-->
         <scene sceneID="Lyb-Fv-f5N">
             <objects>
-                <viewController id="rY2-9t-RCR" sceneMemberID="viewController">
+                <viewController id="rY2-9t-RCR" customClass="DetailPhotoViewController" customModule="ImageSearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RHC-WP-YdV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,6 +151,9 @@
                             <constraint firstItem="guU-lD-Lt9" firstAttribute="leading" secondItem="jgV-Kw-gkb" secondAttribute="leading" id="yVN-sS-o04"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="guU-lD-Lt9" id="PVt-aN-qkc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53J-pR-fHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
