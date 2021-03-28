@@ -13,14 +13,20 @@ class SearchViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    SearchResultManager.shared.searchVC = self
-      // Do any additional setup after loading the view.
+    NotificationCenter.default.addObserver(self, selector: #selector(reloadAfterCellDataSetup), name: Notification.Name.SearchResultListDidFinishSetup, object: nil)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "DetailPhotoViewSegue" {
       guard let vc = segue.destination as? DetailPhotoViewController else { print("\(#function) - Casting Failure to DetailPhotoViewController") ; return }
       vc.searchResult = sender as? SearchResult
+    }
+  }
+  
+  // SearchResultManager의 JSON 파싱이 끝난 후 호출됨
+  @objc private func reloadAfterCellDataSetup() {
+    DispatchQueue.main.async {
+      self.collectionView.reloadData()
     }
   }
 }
@@ -81,9 +87,6 @@ extension SearchViewController: UITextFieldDelegate {
     
     guard let searchKey = textField.text else { return false }
     
-    // 컬렉션뷰의 reloadData() 를 호출해야 하는 시점
-    // == SearchResultManger에서 SearchResultList 가 모두 채워진 시점
-    // 어떻게 해결하지? -> Notification 으로 한번 해보자
     SearchResultManager.shared.request(for: searchKey)
     
     return true
