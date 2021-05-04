@@ -67,7 +67,6 @@
 				DDB8394E260EF7F000D448BC /* Support */,
 				DDB8394D260EF7E300D448BC /* Main */,
 				DDB83942260E0D0A00D448BC /* SearchResult */,
-				DDB8392D260D8A7F00D448BC /* ThumbnailImageViewCell.swift */,
 				DDB8391D260D875400D448BC /* Assets.xcassets */,
 				DDB8391F260D875400D448BC /* LaunchScreen.storyboard */,
 				DDB83922260D875400D448BC /* Info.plist */,
@@ -89,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB83929260D87C000D448BC /* SearchViewController.swift */,
+				DDB8392D260D8A7F00D448BC /* ThumbnailImageViewCell.swift */,
 				DDB8391A260D875200D448BC /* Main.storyboard */,
 			);
 			path = Main;

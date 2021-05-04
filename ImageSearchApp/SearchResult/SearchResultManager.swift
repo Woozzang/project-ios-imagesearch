@@ -5,7 +5,6 @@
 //  Created by Woochan Park on 2021/03/26.
 //
 
-import Foundation
 import UIKit
 
 class SearchResultManager {
@@ -38,7 +37,6 @@ extension SearchResultManager {
   
   // struct로 선언해서 static let 으로 만드는 것과 무슨 차이가 있을까?
   // 1. struct로 선언하면 변수명.rawValue 로 접근하지 않고 변수명 만으로 String 을 얻을 수 있음
-  //
   enum KaKaoImageSearchAPIComponent: String {
     case scheme = "https"
     case host = "dapi.kakao.com"
@@ -90,6 +88,7 @@ extension SearchResultManager {
   }
   
   private func createComponents(searchKey query: String, page: Int = 1, size: Int = 80) -> URLComponents {
+    
     var components = URLComponents()
     
     components.scheme = KaKaoImageSearchAPIComponent.scheme.rawValue
