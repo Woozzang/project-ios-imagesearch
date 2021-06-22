@@ -44,6 +44,11 @@ extension SearchResultManager {
     case apiKey = "KakaoAK 10c86192c308600290f841f69714f5e7"
   }
   
+//  struct KaKaoImageSearchAPIComponent {
+//    static let scheme = "https"
+//
+//  }
+  
   func request(for query: String, with method: HTTPMethod = .get) {
     
     self.searchResultList.removeAll()

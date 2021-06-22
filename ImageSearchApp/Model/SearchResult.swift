@@ -18,7 +18,6 @@ struct SearchResult: Codable {
   var imageURL: String
   
   enum CodingKeys: String, CodingKey {
-    
     case collection
     case dateTime = "datetime"
     case siteName = "display_sitename"
